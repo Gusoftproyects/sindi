@@ -1,0 +1,16 @@
+
+body {
+    background: linear-gradient(90deg,#FF3131, #FF914D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.headerPrincipal {
+    margin-top: -0.67em;
+    
+    background-color: aliceblue;
+    
+}
+.headerPrincipal img{
+    width: 15%;
+}
