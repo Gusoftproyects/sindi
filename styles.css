@@ -111,48 +111,46 @@ body {
 
 
 
-
-.inicio h1 {
-  margin-top: 100px;    /* Mover hacia abajo */
-  margin-bottom: 10px; /* Mover hacia arriba */
-  margin-left: 20px;   /* Mover hacia la derecha */
-  margin-right: 20px;  /* Mover hacia la izquierda */
-  font-size: 58px; /* Ajusta el tamaño del texto según sea necesario */
-  color: #ffffff;
-}
-.inicio h2 {
-  color: #ffffff;
-}
-
-.inicio button {
-  background-color: white;
-  color: #333;
-  border: 2px solid #333;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 30px;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-  background-color: #333;
-  color: white;
-}
-
-
-.inicio h3 {
-  width: 300px; /* Ancho del contenedor */
-  padding: 20px; /* Espacio interno alrededor del h3 */
-  background-color: #f0f0f0; /* Color de fondo del contenedor */
-  border-radius: 100px; /* Bordes redondeados */
-  background-color: #ffffff; /* Color de fondo del h3 */
-  color: #000000; /* Color del texto */
-  padding: 10px 20px; /* Espacio interno del h3 */
-  margin: 0; 
-}
-
 .inicio {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.inicio h1 {
+  margin-top: 100px;    /* Mover hacia abajo */
+  margin-bottom: 35px; /* Mover hacia arriba */
+  /*margin-left: 20px;    Mover hacia la derecha */
+  /*margin-right: 20px;   Mover hacia la izquierda */
+  font-size: 88px; /* Ajusta el tamaño del texto según sea necesario */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232);}
+.inicio h2 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 200px; /*Espacio para abajo*/
+}
+
+.inicio h3 {
+
+  display: inline; /* Tomar el ancho del texto y ocupa solo el ancho del contenido*/
+  padding: 20px;
+  padding-left: 200px; /*Relleno del lado derecho*/
+  padding-right: 200px; /*Relleno del lado izquierdo*/
+  background-color: #f0f0f0; /* Color de fondo del contenedor */
+  border-radius: 100px; /* Bordes redondeados */
+  color: #2d2d2d; /* Color del texto */
+  font-size: 22px;
+}
+.inicio p{
+  margin-top: 105px; /*Mandamos lo que hay arriba para más arriba*/
+  margin-bottom: 105px; /*Mandamos lo que hay abajo para más abajo*/
+  color: #f0f0f0;
+  font-size: 22px;
+  width: 50%;
+  transform: translateX(50%); /*Mueve en el eje X hacia la mitad*/
+
+}
+.categorias h1 {
+  font-size: 58px; /* Ajusta el tamaño del texto según sea necesario */
+  color: #ffffff;
 }
