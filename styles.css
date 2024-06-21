@@ -141,3 +141,18 @@ button:hover {
   color: white;
 }
 
+
+.inicio h3 {
+  width: 300px; /* Ancho del contenedor */
+  padding: 20px; /* Espacio interno alrededor del h3 */
+  background-color: #f0f0f0; /* Color de fondo del contenedor */
+  border-radius: 100px; /* Bordes redondeados */
+  background-color: #ffffff; /* Color de fondo del h3 */
+  color: #000000; /* Color del texto */
+  padding: 10px 20px; /* Espacio interno del h3 */
+  margin: 0; 
+}
+
+.inicio {
+  text-align: center;
+}
