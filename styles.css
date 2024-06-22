@@ -1,111 +1,124 @@
 * {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 body {
-    margin: 0;  
-    align-items: center;
-    background: linear-gradient(90deg, #FF3131, #FF914D);
-    text-align: center;
-    
+  margin: 0;
+  align-items: center;
+  background: linear-gradient(90deg, #FF3131, #FF914D);
+  text-align: center;
+
 
 }
 
 .headerPrincipal {
-    display: flex;
-    background-color: aliceblue;
-    justify-content: center; /*Verticalmente en la linea*/
-    align-items: center; 
-    text-align: center;/* Horizontalmente */
+  display: flex;
+  background-color: aliceblue;
+  justify-content: center;
+  /*Verticalmente en la linea*/
+  align-items: center;
+  text-align: center;
+  /* Horizontalmente */
 
 }
 
 .headerPrincipal img {
-    width: 15%;
-}
-.headerPrincipal i{
-    font-size: 40px; /*Tamaño de letra*/
-    color: #EA5C3A;
-    margin-left: 45px; /*Espaciado del lado derecho*/
-}
-.headerPrincipal a{
-    font-size: 23px;
-    margin: 40px; /*Separar algo de algo*/
-    padding: 8px;
-    color: #545454f2;
-    text-decoration: none;
+  width: 15%;
 }
 
-.headerPrincipal a:hover{
-    background-color: #EA5C3A;
-    color: white;
-    padding: 8px;
-    border-radius: 20px; /*Redondea el fondo*/
+.headerPrincipal i {
+  font-size: 40px;
+  /*Tamaño de letra*/
+  color: #EA5C3A;
+  margin-left: 45px;
+  /*Espaciado del lado derecho*/
+}
+
+.headerPrincipal a {
+  font-size: 23px;
+  margin: 40px;
+  /*Separar algo de algo*/
+  padding: 8px;
+  color: #545454f2;
+  text-decoration: none;
+}
+
+.headerPrincipal a:hover {
+  background-color: #EA5C3A;
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  /*Redondea el fondo*/
 }
 
 /*Buscador del header*/
 
 .searchBox {
-    display: flex;
-    max-width: 230px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    background: #EA5C3A;
-    border-radius: 50px;
-    position: relative;
-    margin-left: 90px;
-    color: #fff;
-  }
-  
-  .searchButton {
-    color: white;
-    position: absolute;
-    right: 8px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--gradient-2, linear-gradient(90deg, #1910%, #009EFD 100%));
-    border: 0;
-    display: inline-block;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  }
-  
-  /*hover effect*/
-  button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
-    transform: translateY(-3px);
-  }
-  /*button pressing effect*/
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .searchInput {
-    border: none;
-    background: none;
-    outline: none;
-    color: white;
-    font-size: 20px;
-    padding: 24px 46px 24px 26px;
-  }
-  .searchInput::-webkit-input-placeholder {
-    color: #ebebeb;
-    font-size: 17px;
-  }
-  
-.headerPrincipal .searchBox{
-    align-items: right;
-}  
+  display: flex;
+  max-width: 230px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #EA5C3A;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 90px;
+  color: #fff;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #1910%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/*hover effect*/
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 24px 46px 24px 26px;
+}
+
+.searchInput::-webkit-input-placeholder {
+  color: #ebebeb;
+  font-size: 17px;
+}
+
+.headerPrincipal .searchBox {
+  align-items: right;
+}
 
 
 .imagen {
-  width: 150px; /* Ancho deseado */
-  height: auto; /* Mantener la proporción original de la imagen */
-  transform: translate(0px, 100px); /* Mover 20px a la derecha y 10px hacia abajo */
+  width: 150px;
+  /* Ancho deseado */
+  height: auto;
+  /* Mantener la proporción original de la imagen */
+  transform: translate(0px, 100px);
+  /* Mover 20px a la derecha y 10px hacia abajo */
 }
 
 
@@ -116,41 +129,180 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .inicio h1 {
-  margin-top: 100px;    /* Mover hacia abajo */
-  margin-bottom: 35px; /* Mover hacia arriba */
+  margin-top: 100px;
+  /* Mover hacia abajo */
+  margin-bottom: 35px;
+  /* Mover hacia arriba */
   /*margin-left: 20px;    Mover hacia la derecha */
   /*margin-right: 20px;   Mover hacia la izquierda */
-  font-size: 88px; /* Ajusta el tamaño del texto según sea necesario */
+  font-size: 88px;
+  /* Ajusta el tamaño del texto según sea necesario */
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232);}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232); /*Agrega una sombra al texto*/
+}
+
 .inicio h2 {
   color: #ffffff;
   font-size: 30px;
-  margin-bottom: 200px; /*Espacio para abajo*/
+  margin-bottom: 200px;
+  /*Espacio para abajo*/
 }
 
 .inicio h3 {
 
-  display: inline; /* Tomar el ancho del texto y ocupa solo el ancho del contenido*/
+  display: inline;
+  /* Tomar el ancho del texto y ocupa solo el ancho del contenido*/
   padding: 20px;
-  padding-left: 200px; /*Relleno del lado derecho*/
-  padding-right: 200px; /*Relleno del lado izquierdo*/
-  background-color: #f0f0f0; /* Color de fondo del contenedor */
-  border-radius: 100px; /* Bordes redondeados */
-  color: #2d2d2d; /* Color del texto */
+  padding-left: 200px;
+  /*Relleno del lado derecho*/
+  padding-right: 200px;
+  /*Relleno del lado izquierdo*/
+  background-color: #f0f0f0;
+  /* Color de fondo del contenedor */
+  border-radius: 100px;
+  /* Bordes redondeados */
+  color: #2d2d2d;
+  /* Color del texto */
   font-size: 22px;
 }
-.inicio p{
-  margin-top: 105px; /*Mandamos lo que hay arriba para más arriba*/
-  margin-bottom: 105px; /*Mandamos lo que hay abajo para más abajo*/
+
+.inicio p {
+  margin-top: 105px;
+  /*Mandamos lo que hay arriba para más arriba*/
+  margin-bottom: 105px;
+  /*Mandamos lo que hay abajo para más abajo*/
   color: #f0f0f0;
   font-size: 22px;
   width: 50%;
-  transform: translateX(50%); /*Mueve en el eje X hacia la mitad*/
+  transform: translateX(50%);
+  /*Mueve en el eje X hacia la mitad*/
 
 }
-.categorias h1 {
-  font-size: 58px; /* Ajusta el tamaño del texto según sea necesario */
+
+.categorias h1, .servicios h1 {
+  font-size: 58px;
+  /* Ajusta el tamaño del texto según sea necesario */
   color: #ffffff;
 }
+.categorias a:hover{
+  background-color: #c62800 ;
+}
+
+.tipos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;  /*Centrar el contenido*/
+  transform: translateX(50%);
+  /*Mueve en el eje X hacia la mitad*/
+}
+
+.tipos a {
+  font-size: 30px;
+  text-decoration: none;
+  /*Quita el subrayado*/
+  color: #f0f0f0;
+  border: solid #f0f0f0;
+  /*Contorno*/
+  border-radius: 20px;
+  padding: 15px;
+  /*Relleno*/
+  margin: 15px;
+
+}
+
+.tarjetas  {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;  /*Centrar el contenido*/
+  transform: translateX(13%);
+  /*Mueve en el eje X hacia la mitad*/
+}
+
+/*TARJETAS SERVICIO */
+.card {
+  width: 28em; /*anchura*/
+  height: 42.5em; /*altura*/
+  background: #232323b0;
+  border: solid white;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 19px;
+}
+
+.card span {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: block;
+  font-size: 3em;
+}
+.card h3{
+  color: #f0f0f0;
+  font-size: 2em;
+  margin-top: -5px;
+}
+.card .info {
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 1em;
+}
+
+.card .img {
+  margin: auto;
+  margin-top: 20px;
+  width: 7.8em;
+  height: 6.8em;
+  background: white;
+  border-radius: 15px;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  font-size: 26px;
+  color: #ebebeb  ;
+}
+
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: #EA5C3A;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+  font-size: 18px;
+}
+
+.card button:hover {
+  background: #da5534;
+  color: white;
+  cursor: pointer;
+}
+
+

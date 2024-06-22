@@ -1,0 +1,10 @@
+TAREAS TONY:
+- Añadir la informacion y recursos del apartado de inicio ✅
+
+TAREAS MARCO: 
+- Crear un nuevo archivo llamado login.html con el mismo header (barra blanca superior) pero el contenido relacionado a 
+    un sistema de iniciar sesión (Titulo: Iniciar Sesión, Subtitulo: Frase llamativa, Imagen: Icono de Usuario)
+    y la pagina debera tener tambien el mismo fondo
+
+
+
