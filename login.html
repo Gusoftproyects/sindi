@@ -54,7 +54,34 @@
     <div class="inicio">
         <h1 class="tituloLogin">Iniciar sesion</h1>
         <h2>Descubre un mundo de posibilidades y beneficios.<br> ¡Conectate Ahora!</h2>
-        <img class="imagen" src="images/iconos/icono usuario.png" alt="icono usuario">
+        <div class="wrapper">
+            <div class="card-switch">
+                <label class="switch">
+                   <input type="checkbox" class="toggle">
+                   <span class="slider"></span>
+                   <span class="card-side"></span>
+                   <div class="flip-card__inner">
+                      <div class="flip-card__front">
+                         <div class="title">Iniciar Sesión</div>
+                         <form class="flip-card__form" action="">
+                            <input class="flip-card__input" name="email" placeholder="Usuario" type="email">
+                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
+                            <button class="flip-card__btn">Acceder</button>
+                         </form>
+                      </div>
+                      <div class="flip-card__back">
+                         <div class="title">Registrarse</div>
+                         <form class="flip-card__form" action="">
+                            <input class="flip-card__input" placeholder="Nombre" type="name">
+                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
+                            <button class="flip-card__btn">Confirmar</button>
+                         </form>
+                      </div>
+                   </div>
+                </label>
+            </div>   
+       </div>
     </div>
 </body>
 </html>
