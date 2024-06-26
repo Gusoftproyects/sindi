@@ -4,7 +4,9 @@ TAREAS TONY:
 TAREAS MARCO: 
 - Crear un nuevo archivo llamado login.html con el mismo header (barra blanca superior) pero el contenido relacionado a 
     un sistema de iniciar sesión (Titulo: Iniciar Sesión, Subtitulo: Frase llamativa, Imagen: Icono de Usuario)
-    y la pagina debera tener tambien el mismo fondo
+    y la pagina debera tener tambien el mismo fondo ✅
 
+- Crear otro input (textbox) debajo del input password, va a tener placeholder Confirmar contraseña y un nombre ConfirmPassword
+    y vas a recibir todos los input en el archivo registro.php y los vas a mostrar | tambien validar si son iguales el ConfirmPassword y el Password
 
 

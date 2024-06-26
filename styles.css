@@ -1,5 +1,7 @@
 * {
   font-family: monospace;
+  scroll-behavior: smooth; /*baje con calma la pagina*/
+
 }
 
 body {
@@ -7,7 +9,6 @@ body {
   align-items: center;
   background: linear-gradient(90deg, #FF3131, #FF914D);
   text-align: center;
-
 
 }
 
@@ -52,7 +53,14 @@ body {
   border-radius: 20px;
   /*Redondea el fondo*/
 }
-
+.iniciar-sesion a:hover{ /*Cuando pasas el mouse encima*/
+  
+  background-color: transparent;
+}
+.iniciar-sesion i:hover{ /*Cuando pasas el mouse encima*/
+  
+  color: #1A1A1A; /*cAMBIAR el color de icono */
+}
 /*Buscador del header*/
 
 .searchBox {
@@ -342,7 +350,7 @@ button:active {
   top: 0;
   width: 100px;
   text-decoration: underline;
-  color: var(--font-color);
+  color: whitesmoke;
   font-weight: 600;
 }
 
@@ -353,7 +361,7 @@ button:active {
   top: 0;
   width: 100px;
   text-decoration: none;
-  color: var(--font-color);
+  color: whitesmoke;
   font-weight: 600;
 }
 

@@ -9,9 +9,7 @@
 <body>
     <header class="headerPrincipal">
         <img src="images/logos/logopage.png" alt="Logo Header">
-        <a href="">Iniciar sesion</a>
-        <a href="">Registrarse</a>
-        <a href="">Servicios</a>
+        <a href="home.html">Inicio</a>
         <div class="searchBox">
             <input class="searchInput" type="text" name="" placeholder="Buscar algo">
             <button class="searchButton" href="#">
@@ -52,7 +50,7 @@
     </header>
 
     <div class="inicio">
-        <h1 class="tituloLogin">Iniciar sesion</h1>
+        <h1 class="tituloLogin">Iniciar Sesión</h1>
         <h2>Descubre un mundo de posibilidades y beneficios.<br> ¡Conectate Ahora!</h2>
         <div class="wrapper">
             <div class="card-switch">
@@ -71,11 +69,11 @@
                       </div>
                       <div class="flip-card__back">
                          <div class="title">Registrarse</div>
-                         <form class="flip-card__form" action="">
-                            <input class="flip-card__input" placeholder="Nombre" type="name">
+                         <form class="flip-card__form" action="registro.php" method="post">
+                            <input class="flip-card__input" placeholder="Nombre" type="name" name="nombre">
                             <input class="flip-card__input" name="email" placeholder="Email" type="email">
                             <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
-                            <button class="flip-card__btn">Confirmar</button>
+                            <button class="flip-card__btn" type="submit">Registrarse</button>
                          </form>
                       </div>
                    </div>
