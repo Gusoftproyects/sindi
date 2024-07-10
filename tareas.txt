@@ -1,6 +1,6 @@
 TAREAS TONY:
 - Añadir la informacion y recursos del apartado de inicio ✅
-- Hacer más grande el login y crear un nuevo archivo html que contendrá el mismo header que el del home.html y agregar un titulo de Bienvenido Usuario y un subtitulo de una frase chida
+- Hacer más grande el login y crear un nuevo archivo html que contendrá el mismo header que el del home.html y agregar un titulo de Bienvenido Usuario y un subtitulo de una frase chida ✅
 
 TAREAS MARCO: 
 - Crear un nuevo archivo llamado login.html con el mismo header (barra blanca superior) pero el contenido relacionado a 
@@ -10,5 +10,5 @@ TAREAS MARCO:
 - Crear otro input (textbox) debajo del input password, va a tener placeholder Confirmar contraseña y un nombre ConfirmPassword
     y vas a recibir todos los input en el archivo registro.php y los vas a mostrar | tambien validar si son iguales el ConfirmPassword y el Password ✅
 
-
+- Crear un archivo .php llamado conexion donde tenga de la linea 19 a la 26 del archivo registro.php, y este archivo conexion.php deberas incluirlo con include en todas los archivos .php
 

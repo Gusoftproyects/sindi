@@ -9,12 +9,33 @@ echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
 // para crear una variable tiene que empezar con el $ asi $color = "Rojo";
 
 
-$user = $_POST['nombre'];  // Con el POST Obtengo el valor del input del formulario registro
+$nombre = $_POST['nombre'];  // Con el POST Obtengo el valor del input del formulario registro
 $email = $_POST['email'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirmPassword'];
+$passwordEncript = password_hash($password, PASSWORD_BCRYPT); // te encriptado o cifra la contrasena
 
 if ($password == $confirmPassword) {
+    // Conectar a base de datos, se requieren 4 datos de la db
+    $nombreServidor = "localhost"; // nombre del servidor
+    $usuarioBaseDatos = "root";  // nombre de usuario para acceder a la base de datos, por default es root
+    $passwordBaseDatos = ""; // contraseña de la  base de datos
+    $nombreBaseDatos = "sindi_db"; // nombre de la base de datos
+
+    // Crear la conexión a la base de datos
+    $conexion = new mysqli($nombreServidor, $usuarioBaseDatos, $passwordBaseDatos, $nombreBaseDatos);
+    // Verificar la conexión
+    if ($conexion->connect_error) { // busca dentro de la variable si hay un error en la conexion
+        die("Conexión fallida: " . $conexion->connect_error); // muestra el error que hay
+    } else { // si no hay error inserta los datos
+
+        $sql = "INSERT INTO usuarios(nombre, email, password) VALUES ('$nombre', '$email', '$passwordEncript'); ";
+        if ($conexion->query($sql) === TRUE) { // query le manda la sentencia sql a la base de datos
+          //  echo "Registro exitoso";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conexion->error;
+        }
+    }
     echo "
     <script> 
     document.addEventListener('DOMContentLoaded', function() {
@@ -30,7 +51,6 @@ if ($password == $confirmPassword) {
     }); 
     </script> 
     ";
-    
 } else {
     echo "
     <script> 
@@ -54,21 +74,3 @@ if ($password == $confirmPassword) {
 // echo "Name: " . $user . " "; // Mostramos el nombre que se escribio en el form Registro
 // echo "Email: " . $email;
 // echo "Contraseña: " . $password;
-
-
-// Conectar a base de datos, se requieren 4 datos de la db
-$nombreServidor = "localhost"; // nombre del servidor
-$usuarioBaseDatos = "root";  // nombre de usuario para acceder a la base de datos, por default es root
-$passwordBaseDatos = ""; // contraseña de la  base de datos
-$nombreBaseDatos = "sindi_db"; // nombre de la base de datos
-
-
-
-// Crear la conexión a la base de datos
-$conexion = new mysqli($nombreServidor, $usuarioBaseDatos, $passwordBaseDatos, $nombreBaseDatos);
-// Verificar la conexión
-if ($conexion->connect_error) { // busca dentro de la variable si hay un error en la conexion
-    die("Conexión fallida: " . $conn->connect_error); // muestra el error que hay
-} else {
-    // echo "Conexion exitosa";    
-}
