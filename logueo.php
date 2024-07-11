@@ -1,6 +1,7 @@
 <?php 
 
 include 'registro.php'; // incluye todo lo de otro archivo
+include 'conexion.php';
 
 $email = $_POST['email'];  // Con el POST Obtengo el valor del input del formulario iniciar sesion
 $password = $_POST['password'];
