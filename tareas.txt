@@ -20,3 +20,5 @@ TAREAS MARCO:
 
 - Crear un archivo .php llamado conexion donde tenga de la linea 19 a la 26 del archivo registro.php, y este archivo conexion.php deberas incluirlo con include en todas los archivos .php ✅
 
+- Importar la base de datos ubicada en la carpeta database, necesitas ir a xammp admin de MySql , crear una base de datos llamada sindi_db y le das a importar y seleccionas ese archivo de la carpeta database. Checar las redireciones del header de bienvenida.php. Vas a copiar el form de este link y lo pegas abajo del contenido de bienvenida.php 
+https://uiverse.io/omriluz/slimy-mole-59

@@ -14,9 +14,7 @@ $nombre = $_POST['nombre'];  // Con el POST Obtengo el valor del input del formu
 $email = $_POST['email'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirmPassword'];
-// $passwordEncript = password_hash($password, PASSWORD_ARGON2I); // te encriptado o cifra la contrasena
-$passwordEncript = md5($password); // otro metodo de encriptacion
-
+$passwordEncript = password_hash($password, PASSWORD_DEFAULT); // encriptacion
 
 if ($password == $confirmPassword) {
     
@@ -32,6 +30,7 @@ if ($password == $confirmPassword) {
             // echo "Registro exitoso";
         } else {
             echo "Error: " . $stmt->error;
+            die();
         }
 
 

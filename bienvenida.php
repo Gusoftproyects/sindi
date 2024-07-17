@@ -1,3 +1,12 @@
+<?php
+session_start();
+// proteger pagina, solo acceden usuarios logueados
+if (!isset($_SESSION['nombre'])) {
+    header('Location: login.html');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,12 +60,13 @@
             </button>
         </div>
         <div class="iniciar-sesion">
-            <a href="login.html"><i class="fa fa-user"></i></a>
+            <a href="bienvenida.php"><i class="fa fa-user"></i></a>
+            <a href="logout.php"><i class="fa fa-sign-out"></i></a>
         </div>
     </header>
     <div class="inicio">
         <img class="imagen" src="images/iconos/IconoDeBienvenida.png" alt="Logo IconoDeBienvenida">
-        <h1>Bienvenido</h1>
+        <h1>Bienvenido <?php echo $_SESSION['nombre']; ?> </h1>
         <h2>Ya seas un experto en tu campo o un entusiasta del aprendizaje,<br>aquí encontrarás una comunidad diversa lista para colaborar.</h2>
     </div>
     

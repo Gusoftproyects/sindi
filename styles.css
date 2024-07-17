@@ -53,6 +53,10 @@ body {
   border-radius: 20px;
   /*Redondea el fondo*/
 }
+.iniciar-sesion a {
+  margin: 0px;
+  
+}
 .iniciar-sesion a:hover{ /*Cuando pasas el mouse encima*/
   
   background-color: transparent;
@@ -74,6 +78,7 @@ body {
   position: relative;
   margin-left: 90px;
   color: #fff;
+  overflow: hidden; /* oculta todo lo de afuera */
 }
 
 .searchButton {
