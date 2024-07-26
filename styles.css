@@ -1,6 +1,7 @@
 * {
   font-family: monospace;
-  scroll-behavior: smooth; /*baje con calma la pagina*/
+  scroll-behavior: smooth;
+  /*baje con calma la pagina*/
 
 }
 
@@ -53,18 +54,113 @@ body {
   border-radius: 20px;
   /*Redondea el fondo*/
 }
+
+@media(max-width: 768px) {
+  .headerPrincipal {
+    display: flex;
+    width: 100%;
+
+  }
+
+  .iniciar-sesion {
+    display: inline-flex !important;
+  }
+
+  .headerPrincipal img {
+    width: 40%;
+  }
+
+  .inicio h1 {
+    font-size: 3.5rem !important;
+  }
+
+  .inicio h3 {
+    padding: 15px !important;
+    width: 40% !important;
+    font-size: 1.3rem !important;
+  }
+
+  .headerPrincipal .searchBox {
+    display: none;
+  }
+
+  .headerPrincipal a {
+    display: none;
+  }
+
+  .headerPrincipal .iniciar-sesion a {
+    display: block;
+
+  }
+
+  .servicios h1,
+  .categorias h1 {
+    font-size: 3rem !important;
+  }
+
+  .container img {
+    width: 50% !important;
+  }
+
+  .flip-card__back,
+  .flip-card__front {
+    margin-left: -5% !important;
+  }
+
+  .swal2-popup {
+    font-size: 3.7rem !important;
+    /* Ajusta el tamaño de fuente */
+    width: 90% !important;
+    /* Ajusta el ancho */
+    padding: 20px !important;
+    /* Ajusta el padding */
+  }
+
+  .swal2-title {
+    font-size: 4rem !important;
+    /* Ajusta el tamaño del título */
+  }
+
+  .swal2-content {
+    font-size: 3.5rem !important;
+    /* Ajusta el tamaño del contenido */
+  }
+
+  .swal2-actions button {
+    font-size: 4rem !important;
+    /* Ajusta el tamaño de los botones */
+    padding: 10px 20px !important;
+    /* Ajusta el padding de los botones */
+  }
+  .swal2-styled {
+    background-color: #EA5C3A !important;
+  }
+  .bienvenida h1{
+    font-size: 2.5rem !important;
+  }
+  .bienvenida h2{
+    font-size: 1.5rem !important;
+  }
+}
+
 .iniciar-sesion a {
   margin: 0px;
-  
+
 }
-.iniciar-sesion a:hover{ /*Cuando pasas el mouse encima*/
-  
+
+.iniciar-sesion a:hover {
+  /*Cuando pasas el mouse encima*/
+
   background-color: transparent;
 }
-.iniciar-sesion i:hover{ /*Cuando pasas el mouse encima*/
-  
-  color: #1A1A1A; /*cAMBIAR el color de icono */
+
+.iniciar-sesion i:hover {
+  /*Cuando pasas el mouse encima*/
+
+  color: #1A1A1A;
+  /*cAMBIAR el color de icono */
 }
+
 /*Buscador del header*/
 
 .searchBox {
@@ -78,7 +174,8 @@ body {
   position: relative;
   margin-left: 90px;
   color: #fff;
-  overflow: hidden; /* oculta todo lo de afuera */
+  overflow: hidden;
+  /* oculta todo lo de afuera */
 }
 
 .searchButton {
@@ -143,6 +240,35 @@ button:active {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: -75px;
+}
+
+.bienvenida h1 {
+  margin-top: 100px;
+  /* Mover hacia abajo */
+  margin-bottom: 35px;
+  /* Mover hacia arriba */
+  /*margin-left: 20px;    Mover hacia la derecha */
+  /*margin-right: 20px;   Mover hacia la izquierda */
+  font-size: 75px;
+  /* Ajusta el tamaño del texto según sea necesario */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232);
+  /*Agrega una sombra al texto*/
+}
+
+.bienvenida h2 {
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 200px;
+  /*Espacio para abajo*/
+}
+
+.bienvenida {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -75px;
 }
 
 .inicio h1 {
@@ -155,7 +281,8 @@ button:active {
   font-size: 88px;
   /* Ajusta el tamaño del texto según sea necesario */
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232); /*Agrega una sombra al texto*/
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232);
+  /*Agrega una sombra al texto*/
 }
 
 .inicio h2 {
@@ -181,6 +308,7 @@ button:active {
   color: #2d2d2d;
   /* Color del texto */
   font-size: 22px;
+  box-shadow: 0px 5px 0px 0px #8b1c00;
 }
 
 .inicio p {
@@ -196,20 +324,23 @@ button:active {
 
 }
 
-.categorias h1, .servicios h1 {
+.categorias h1,
+.servicios h1 {
   font-size: 58px;
   /* Ajusta el tamaño del texto según sea necesario */
   color: #ffffff;
 }
-.categorias a:hover{
-  background-color: #c62800 ;
+
+.categorias a:hover {
+  background-color: #c62800;
 }
 
 .tipos {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  justify-content: center;  /*Centrar el contenido*/
+  justify-content: center;
+  /*Centrar el contenido*/
   transform: translateX(50%);
   /*Mueve en el eje X hacia la mitad*/
 }
@@ -228,19 +359,48 @@ button:active {
 
 }
 
-.tarjetas  {
+.tarjetas {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  justify-content: center;  /*Centrar el contenido*/
+  justify-content: center;
+  /*Centrar el contenido*/
   transform: translateX(13%);
   /*Mueve en el eje X hacia la mitad*/
 }
 
+.btnLogin button {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  border: none;
+  outline: none;
+  background-color: #dd4f2c;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #cc2a02;
+  text-transform: uppercase;
+}
+
+.btnLogin button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+.btnLogin a {
+  text-decoration: none;
+  color: white;
+}
+
 /*TARJETAS SERVICIO */
 .card {
-  width: 28em; /*anchura*/
-  height: 42.5em; /*altura*/
+  width: 28em;
+  /*anchura*/
+  height: 42.5em;
+  /*altura*/
   background: #232323b0;
   border: solid white;
   transition: 1s ease-in-out;
@@ -258,12 +418,16 @@ button:active {
   text-align: center;
   display: block;
   font-size: 3em;
+  margin-top: -50px;
+
 }
-.card h3{
+
+.card h3 {
   color: #f0f0f0;
-  font-size: 2em;
-  margin-top: -5px;
+  font-size: 1.5em;
+  margin-top: 0px;
 }
+
 .card .info {
   font-weight: 400;
   color: rgb(255, 255, 255);
@@ -271,16 +435,20 @@ button:active {
   text-align: center;
   font-size: 1.4em;
   margin: 1em;
+  height: 160px;
 }
 
-.card .img {
+
+.card .img img {
   margin: auto;
-  margin-top: 20px;
-  width: 7.8em;
-  height: 6.8em;
+  width: 9em;
+  height: 9em;
+  margin-top: 40px;
+  margin-bottom: 70px;
   background: white;
   border-radius: 15px;
 }
+
 
 .card .share {
   margin-top: 1em;
@@ -288,7 +456,7 @@ button:active {
   justify-content: center;
   gap: 1em;
   font-size: 26px;
-  color: #ebebeb  ;
+  color: #ebebeb;
 }
 
 
@@ -331,10 +499,11 @@ button:active {
   --bg-color: #fff;
   --bg-color-alt: #ff0000ef;
   --main-color: #323232;
-     display: flex; 
-     flex-direction: column; 
-    align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 /* switch card */
 .switch {
   transform: translateY(-100px);
@@ -406,23 +575,23 @@ button:active {
   transition: 0.3s;
 }
 
-.toggle:checked + .slider {
+.toggle:checked+.slider {
   background-color: var(--input-focus);
 }
 
-.toggle:checked + .slider:before {
+.toggle:checked+.slider:before {
   transform: translateX(30px);
 }
 
-.toggle:checked ~ .card-side:before {
+.toggle:checked~.card-side:before {
   text-decoration: none;
 }
 
-.toggle:checked ~ .card-side:after {
+.toggle:checked~.card-side:after {
   text-decoration: underline;
 }
 
-/* card */ 
+/* card */
 
 .flip-card__inner {
   width: 300px;
@@ -430,22 +599,23 @@ button:active {
   position: relative;
   background-color: transparent;
   perspective: 1000px;
-    /* width: 100%;
+  /* width: 100%;
     height: 100%; */
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
-.toggle:checked ~ .flip-card__inner {
+.toggle:checked~.flip-card__inner {
   transform: rotateY(180deg);
 }
 
-.toggle:checked ~ .flip-card__front {
+.toggle:checked~.flip-card__front {
   box-shadow: none;
 }
 
-.flip-card__front, .flip-card__back {
+.flip-card__front,
+.flip-card__back {
   padding: 20px;
   position: absolute;
   display: flex;
@@ -503,7 +673,8 @@ button:active {
   border: 2px solid var(--input-focus);
 }
 
-.flip-card__btn:active, .button-confirm:active {
+.flip-card__btn:active,
+.button-confirm:active {
   box-shadow: 0px 0px var(--main-color);
   transform: translate(3px, 3px);
 }
@@ -520,8 +691,145 @@ button:active {
   font-weight: 600;
   color: var(--font-color);
   cursor: pointer;
-} 
+}
+
+.flip-card__form .txtImage {
+  font-size: 1.2rem;
+}
+
+
+/*FOOTER*/
+
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
 
 
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 0;
+  /* min-height: 100vh;*/
+}
+
+.footer {
+  /* background: linear-gradient(#e75530, 20%, #e56e50); */
+  background: #6c1a063b;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 700px;
+}
+
+/*END FOOTER SOCIAL DESIGN*/
+.single_footer {}
+
+.single_footer img {
+  width: 20%;
+}
+
+@media only screen and (max-width:768px) {
+  .single_footer {
+    margin-bottom: 30px;
+  }
+}
+
+.single_footer h4 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.single_footer h4::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.single_footer p {
+  color: #fff;
+}
+
+.single_footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.single_footer ul li {}
+
+.single_footer ul li a {
+  color: #e9e9e9;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  line-height: 36px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.single_footer ul li a:hover {
+  color: #366fff;
+}
+
+.single_footer_address {}
+
+.single_footer_address ul {}
+
+.single_footer_address ul li {
+  color: #fff;
+}
+
+.single_footer_address ul li span {
+  font-weight: 400;
+  color: #fff;
+  line-height: 28px;
+}
+
+.contact_social ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.copyright {
+  margin-top: 70px;
+  padding-top: 40px;
+  color: #fff;
+  font-size: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.copyright a {
+  color: #f9fcfd;
+  transition: all 0.2s ease 0s;
+}
+
+.copyright a:hover {
+  color: #366fff;
+}
+
+.hidden {
+  display: none;
+}

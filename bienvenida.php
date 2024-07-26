@@ -1,10 +1,35 @@
 <?php
 session_start();
+include 'conexion.php';
 // proteger pagina, solo acceden usuarios logueados
-if (!isset($_SESSION['nombre'])) {
-    header('Location: login.html');
-    exit;
+if (!isset($_SESSION['nombre'])) { // si existe algo en esa variable de sesion y luego el ! cambia el booleano (si no estoy logueado)
+    header('Location: login.php'); // redireccionar
+    exit; // se interrumpe el codigo
 }
+$id = isset($_POST['id']) ? $_POST['id'] : null;
+$user_id = $_SESSION['user_id']; // Suponiendo que el ID del usuario está almacenado en la sesión
+$servicio = '';
+$descripcion = '';
+$facebook = '';
+$instagram = '';
+$imagen = '';
+// Cargar los datos actuales del servicio
+$sql = "SELECT * FROM servicios WHERE user_id = ?";
+$stmt = $conexion->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    $id = htmlspecialchars($row['id']);
+    $servicio = htmlspecialchars($row['servicio']);
+    $descripcion = htmlspecialchars($row['descripcion']);
+    $facebook = htmlspecialchars($row['facebook']);
+    $instagram = htmlspecialchars($row['instagram']);
+    $imagen = htmlspecialchars($row['imagen']);
+}
+$stmt->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +46,8 @@ if (!isset($_SESSION['nombre'])) {
 <body>
     <header class="headerPrincipal">
         <img src="images/logos/logopage.png" alt="Logo Header">
-        <a href="">Inicio</a>
-        <a href="#funcionamiento">Funcionamiento</a>
-        <a href="#servicios">Servicios</a>
+
+        <a href="home.php#servicios">Servicios</a>
         <div class="searchBox">
             <input class="searchInput" type="text" name="" placeholder="Buscar algo">
             <button class="searchButton" href="#">
@@ -60,15 +84,65 @@ if (!isset($_SESSION['nombre'])) {
             </button>
         </div>
         <div class="iniciar-sesion">
-            <a href="bienvenida.php"><i class="fa fa-user"></i></a>
+        <a class="hidden" href="home.php"><i class="fa fa-home"></i></a>
             <a href="logout.php"><i class="fa fa-sign-out"></i></a>
+            
         </div>
     </header>
-    <div class="inicio">
+    <div class="bienvenida">
         <img class="imagen" src="images/iconos/IconoDeBienvenida.png" alt="Logo IconoDeBienvenida">
-        <h1>Bienvenido <?php echo $_SESSION['nombre']; ?> </h1>
-        <h2>Ya seas un experto en tu campo o un entusiasta del aprendizaje,<br>aquí encontrarás una comunidad diversa lista para colaborar.</h2>
+        <h1>¡Bienvenido <?php echo $_SESSION['nombre']; ?>! </h1>
+        <h2>Ya seas un experto en tu campo o un entusiasta del aprendizaje,<br>aquí encontrarás una comunidad diversa lista para colaborar.<br><br> Rellena o actualiza la información para mostrarle al público que es lo que haces.</h2>
     </div>
-    
+    <div class="wrapper">
+        <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <div class="title">Tú Información</div>
+                <form class="flip-card__form" action="update.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
+
+                    <label class="txtImage">Nombre del servicio / habilidad</label>
+                    <input class="flip-card__input" name="servicio" placeholder="Desarrollador Web" type="text" value="<?php echo htmlspecialchars($servicio); ?>" required>
+                    <label class="txtImage">Descripción de tu servicio</label>
+                    <textarea class="flip-card__input" name="descripcion" placeholder="Soy una persona con habilidades en..." maxlength="205" required><?php echo htmlspecialchars($descripcion); ?></textarea>
+                    <label class="txtImage">Link a tu Facebook</label>
+                    <input class="flip-card__input" name="facebook" placeholder="https://www.facebook.com/gusoftoficial/" type="text" value="<?php echo htmlspecialchars($facebook); ?>">
+                    <label class="txtImage">Link a tu Instagram</label>
+                    <input class="flip-card__input" name="instagram" placeholder="https://www.instagram.com/gusoft_oficial/" type="text" value="<?php echo htmlspecialchars($instagram); ?>">
+                    <label class="txtImage">Sube la imagen de tu perfil</label>
+                    <?php if ($imagen): ?>
+                        <img src="<?php echo htmlspecialchars($imagen); ?>" alt="Imagen de perfil" style="max-width: 150px;">
+                    <?php endif; ?>
+                    <input class="flip-card__input" name="imagen" type="file">
+                    <button class="flip-card__btn" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+        </label>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <div class="single_footer">
+                        <img src="images/logos/logogusoft.png" alt="">
+                        <ul>
+                            <li><a href="https://gusoft.com.mx/#nosotros">Nosotros</a></li>
+                            <li><a href="https://gusoft.com.mx/#pricing">Servicios</a></li>
+                            <li><a href="https://gusoft.com.mx/#proyectos">Proyectos </a></li>
+                            <li><a href="https://gusoft.com.mx/#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+
+            </div><!--- END ROW -->
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright">Copyright © 2024 <a href="https://gusoft.com.mx/"><strong>Gusoft</strong></a>.</p>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
 </body>
+
 </html>

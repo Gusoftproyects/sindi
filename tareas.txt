@@ -3,7 +3,7 @@ TAREAS TONY:
 
 - Hacer más grande el login y crear un nuevo archivo html que contendrá el mismo header que el del home.html y agregar un titulo de Bienvenido Usuario y un subtitulo de una frase chida ✅
 
-- Importar la base de datos ubicada en la carpeta database, necesitas ir a xammp admin de MySql , crear una base de datos llamada sindi_db y le das a importar y seleccionas ese archivo de la carpeta database. Checar las redireciones del header de bienvenida.html. Vas a copiar el form de este link y lo pegas abajo del contenido de bienvenida.html 
+- Importar la base de datos ubicada en la carpeta database, necesitas ir a xammp admin de MySql, crear una base de datos llamada sindi_db y le das a importar y seleccionas ese archivo de la carpeta database. Checar las redireciones del header de bienvenida.html. Vas a copiar el form de este link y lo pegas abajo del contenido de bienvenida.html 
 https://uiverse.io/omriluz/slimy-mole-59
 
 

@@ -2,8 +2,10 @@
 include 'conexion.php'; // incluye la conexion a la base datos
 
 // cargar la libreria de alertas
-echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
-
+echo "<head>
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+<link rel='stylesheet' href='styles.css'>
+</head>";
 
 
 // echo "Hola Mundo"; // echo es para mostrar a pantalla
@@ -44,7 +46,7 @@ if ($password == $confirmPassword) {
          icon: 'success'
          }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'login.html';
+                window.location.href = 'login.php';
             }
         });
     }); 
@@ -60,7 +62,7 @@ if ($password == $confirmPassword) {
         text: 'Las contraseñas deben ser iguales',
           }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'login.html';
+                window.location.href = 'login.php';
             }
         });
     });

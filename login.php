@@ -1,16 +1,29 @@
+<?php
+session_start();
+
+// Verificar si el usuario ya está autenticado
+if (isset($_SESSION['nombre'])) {
+    // Redirigir a la página principal si está autenticado
+    header("Location: bienvenida.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="headerPrincipal">
         <img src="images/logos/logopage.png" alt="Logo Header">
-        <a href="home.html">Inicio</a>
+        <a href="home.php">Inicio</a>
         <div class="searchBox">
             <input class="searchInput" type="text" name="" placeholder="Buscar algo">
             <button class="searchButton" href="#">
@@ -46,7 +59,9 @@
                 </svg>
             </button>
         </div>
-        <i class="fa fa-user"></i>
+        <div class="iniciar-sesion">
+            <a class="hidden" href="home.php"><i class="fa fa-home"></i></a>
+        </div>
 
     </header>
 
@@ -56,33 +71,56 @@
         <div class="wrapper">
             <div class="card-switch">
                 <label class="switch">
-                   <input type="checkbox" class="toggle">
-                   <span class="slider"></span>
-                   <span class="card-side"></span>
-                   <div class="flip-card__inner">
-                      <div class="flip-card__front">
-                         <div class="title">Iniciar Sesión</div>
-                         <form class="flip-card__form" action="logueo.php" method="post">
-                            <input class="flip-card__input" name="email" placeholder="Usuario" type="email" required>
-                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password" required>
-                            <button class="flip-card__btn" type="submit">Acceder</button>
-                         </form>
-                      </div>
-                      <div class="flip-card__back">
-                         <div class="title">Registrarse</div>
-                         <form class="flip-card__form" action="registro.php" method="post">
-                            <input class="flip-card__input" placeholder="Nombre" type="name" name="nombre" required>
-                            <input class="flip-card__input" name="email" placeholder="Email" type="email" required >
-                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password" required>
-                            <input class="flip-card__input" name="confirmPassword" placeholder="Confirmar Contraseña" type="password" required>
-                            <button class="flip-card__btn" type="submit">Registrarse</button>
-                         </form>
-                      </div>
-                   </div>
+                    <input type="checkbox" class="toggle">
+                    <span class="slider"></span>
+                    <span class="card-side"></span>
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front">
+                            <div class="title">Iniciar Sesión</div>
+                            <form class="flip-card__form" action="logueo.php" method="post">
+                                <input class="flip-card__input" name="email" placeholder="Usuario" type="email" required>
+                                <input class="flip-card__input" name="password" placeholder="Contraseña" type="password" required>
+                                <button class="flip-card__btn" type="submit">Acceder</button>
+                            </form>
+                        </div>
+                        <div class="flip-card__back">
+                            <div class="title">Registrarse</div>
+                            <form class="flip-card__form" action="registro.php" method="post">
+                                <input class="flip-card__input" placeholder="Nombre" type="name" name="nombre" required>
+                                <input class="flip-card__input" name="email" placeholder="Email" type="email" required>
+                                <input class="flip-card__input" name="password" placeholder="Contraseña" type="password" required>
+                                <input class="flip-card__input" name="confirmPassword" placeholder="Confirmar Contraseña" type="password" required>
+                                <button class="flip-card__btn" type="submit">Registrarse</button>
+                            </form>
+                        </div>
+                    </div>
                 </label>
-            </div>   
-       </div>
+            </div>
+        </div>
     </div>
-    
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <div class="single_footer">
+                        <img src="images/logos/logogusoft.png" alt="">
+                        <ul>
+                            <li><a href="https://gusoft.com.mx/#nosotros">Nosotros</a></li>
+                            <li><a href="https://gusoft.com.mx/#pricing">Servicios</a></li>
+                            <li><a href="https://gusoft.com.mx/#proyectos">Proyectos </a></li>
+                            <li><a href="https://gusoft.com.mx/#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+
+            </div><!--- END ROW -->
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright">Copyright © 2024 <a href="https://gusoft.com.mx/"><strong>Gusoft</strong></a>.</p>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
 </body>
+
 </html>
